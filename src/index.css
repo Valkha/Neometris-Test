@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@layer base {
+    body {
+        @apply font-[Cabin];
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100vw;
+        background: #fff;
+        overflow-x: hidden;
+    }
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
+
+.glass {
+    background: rgba( 255, 255, 255, 0.25);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
