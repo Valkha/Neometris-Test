@@ -1,25 +1,13 @@
 import React, { useEffect, useRef } from 'react'
-import Neon from '../assets/images/neometris-neon.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import Particles from 'react-tsparticles'
-import { loadFull } from "tsparticles";
+import bgCubes from '../assets/images/fonds/bg_cubes.png'
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 const Home = () => {
-
-    const particlesInit = async (main) => {
-        console.log(main);
-
-        await loadFull(main);
-    };
-
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
 
     {/* Animations */ }
     const SlideInRight = (elem, delay, duration) => {
@@ -46,125 +34,46 @@ const Home = () => {
             {
                 opacity: 1,
                 x: 0,
+                duration: 0.7,
             }
         )
     }
 
-    const SlideInLeftSlow = (elem, delay, duration) => {
-        gsap.fromTo(
-            elem,
-            {
-                opacity: 0,
-                x: -400,
-            },
-            {
-                opacity: 1,
-                x: 0,
-                delay: 0.5,
-            }
-        )
-    }
+
 
     useEffect(() => {
-        SlideInRight('#neon');
+        SlideInRight('#cube');
     }, [])
     useEffect(() => {
-        SlideInLeftSlow('#neo-text');
+        SlideInLeft('#neo-title, #vpd');
     }, [])
 
     return (
-
-        <div id="home" name='home' className='w-full h-screen flex flex-col justify-center items-center bg-black'>
-            <Particles
-                className='z-0 w-full h-full absolute'
-                id="tsparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={{
-                    fullScreen: {
-                        enable: false,
-                    },
-                    fpsLimit: 120,
-                    interactivity: {
-                        events: {
-                            onClick: {
-                                enable: false,
-                                mode: "push",
-                            },
-                            onHover: {
-                                enable: true,
-                                mode: "repulse",
-                            },
-                            resize: true,
-                        },
-                        modes: {
-                            push: {
-                                quantity: 4,
-                            },
-                            repulse: {
-                                distance: 100,
-                                duration: 0.4,
-                            },
-                        },
-                    },
-                    particles: {
-                        color: {
-                            value: "#ffffff",
-                        },
-                        links: {
-                            color: "#ffffff",
-                            distance: 200,
-                            enable: true,
-                            opacity: 0.2,
-                            width: 2,
-                        },
-                        collisions: {
-                            enable: true,
-                        },
-                        move: {
-                            direction: "none",
-                            enable: true,
-                            outModes: {
-                                default: "bounce",
-                            },
-                            random: false,
-                            speed: 1.5,
-                            straight: false,
-                        },
-                        number: {
-                            density: {
-                                enable: true,
-                                area: 1000,
-                            },
-                            value: 70,
-                        },
-                        opacity: {
-                            value: 0.5,
-                        },
-                        shape: {
-                            type: "circle",
-                        },
-                        size: {
-                            value: { min: 1, max: 5 },
-                        },
-                        container: {
-                            value: "#home",
-                        },
-                    },
-                    detectRetina: true,
-                }}
-            />
-            <div className='z-10 w-full mx-2 px-8 flex justify-evenly items-center'>
-                <div className='flex flex-col justify-center h-full max-w-[1000px] px-6'>
-                    <h1 id="neo-title" className='text-2xl md:text-5xl 2xl:text-6xl text-gray-300 my-12' >
-                        <span className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-orange-400 tracking-widest'>NEO</span><span className='tracking-widest'>METRIS</span> sublime votre image.
+        <div id="home" name='home' className='w-full h-screen flex justify-evenly items-center bg-[url("assets/images/fonds/home_bg.png")] px-12 lg:px-32 md:pt-12 lg:pt-20'>
+            <div className=' lg:w-1/2 h-full flex flex-col justify-center items-start lg:pl-12'>
+                <div className='w-full flex flex-col justify-center items-center lg:items-start lg:mb-24 '>
+                    <h1 id="neo-title" className='text-5xl md:text-4xl lg:text-5xl 2xl:text-8xl lg:text-center text-gray-100' >
+                        <span className='font-bold text-white tracking-widest'>NEO</span>
+                        <span className='tracking-widest'><span className='stroked'>METRIS</span></span><br></br>
+                        <span className='stroked text-2xl md:text-3xl lg:text-5xl tracking-widest'> <span className='text-pink-500'>SUBLIME</span> VOTRE IMAGE</span>
                     </h1>
-                    <p id="neo-text" className='text-gray-300 xl:text-2xl 2xl:text-3xl text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore autem similique deleniti excepturi illo at culpa nostrum odit, eveniet voluptatibus tempora dolores ipsam inventore accusamus suscipit beatae eaque doloremque consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis quidem sapiente corrupti vero cumque distinctio tenetur excepturi enim. Fuga ex atque numquam necessitatibus magni eos autem ipsam perspiciatis, nulla magnam fugit!</p>
                 </div>
-                <img id='neon' src={Neon} alt="" className='hidden md:block select-none md:w-[400px] 2xl:w-[700px]' />
-
+                <div id="vpd" className='w-full flex flex-col justify-evenly md:items-start pt-12 md:pt-2 lg:py-0'>
+                    <div className='flex h-full justify-center items-center my-2 lg:py-4'>
+                        <h2 className='uppercase text-gray-50 text-xl lg:text-5xl h-full flex justify-center items-center'>Visite virtuelle immersive</h2>
+                    </div>
+                    <div className='flex h-full justify-center items-center my-2 lg:py-4'>
+                        <h2 className='uppercase text-gray-50 text-xl lg:text-5xl h-full flex justify-center items-center'>Photographie</h2>
+                    </div>
+                    <div className='flex h-full justify-center items-center my-2 lg:py-4'>
+                        <h2 className='uppercase text-gray-50 text-xl lg:text-5xl h-full flex justify-center items-center'>Drone</h2>
+                    </div>
+                </div>
+            </div >
+            <div id="cube" className='hidden w-2/3 h-full md:flex flex-col justify-center items-start z-10 py-auto'>
+                <img src={bgCubes} className='w-full h-full m-6' />
             </div>
-        </div>
+        </div >
     );
 }
 
