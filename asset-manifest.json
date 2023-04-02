@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Neometris-Test/static/css/main.534e81e2.css",
+    "main.js": "/Neometris-Test/static/js/main.1813e561.js",
+    "static/media/bg_cubes.png": "/Neometris-Test/static/media/bg_cubes.0d063c546c55e41a6656.png",
+    "static/media/bg_mp.png": "/Neometris-Test/static/media/bg_mp.5a1dc2f2785afb001605.png",
+    "static/media/camera.png": "/Neometris-Test/static/media/camera.a1564c8a92f8b0339126.png",
+    "static/media/a-photo.png": "/Neometris-Test/static/media/a-photo.db2cbca48022a800c3d8.png",
+    "static/media/drone.png": "/Neometris-Test/static/media/drone.5e12c8899943bbbe1b71.png",
+    "static/media/sophie_bailleul.jpg": "/Neometris-Test/static/media/sophie_bailleul.33c6d1db14f723f6b74c.jpg",
+    "static/media/poppins-all-400-normal.woff": "/Neometris-Test/static/media/poppins-all-400-normal.6fbfdac99c274b77fe96.woff",
+    "static/media/home_bg.png": "/Neometris-Test/static/media/home_bg.6ca21b8be8a972caf46c.png",
+    "static/media/logo-neo-white.png": "/Neometris-Test/static/media/logo-neo-white.7c7b3310604492ce3556.png",
+    "static/media/poppins-devanagari-400-normal.woff2": "/Neometris-Test/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
+    "static/media/proc-graph.png": "/Neometris-Test/static/media/proc-graph.2f4b007a2b1052dc3602.png",
+    "static/media/matterport_logo.png": "/Neometris-Test/static/media/matterport_logo.29fa5b35527306bb0dd0.png",
+    "static/media/poppins-latin-400-normal.woff2": "/Neometris-Test/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/Neometris-Test/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
+    "static/media/picto_tour.svg": "/Neometris-Test/static/media/picto_tour.5b45a42e6006fe0347541c36a5f4f46f.svg",
+    "static/media/picto_com.svg": "/Neometris-Test/static/media/picto_com.afa35bb88ff1a3288b0d0bfe32446e29.svg",
+    "static/media/picto_restau.svg": "/Neometris-Test/static/media/picto_restau.2e3003721bc32fa85c365dfbe8b6af22.svg",
+    "static/media/picto_btp.svg": "/Neometris-Test/static/media/picto_btp.f4b250bf88d6a0625ad4da8b5e521e49.svg",
+    "static/media/picto_ent.svg": "/Neometris-Test/static/media/picto_ent.501d5a41c627cc89c3d234ac6c52a0b8.svg",
+    "static/media/picto_cult.svg": "/Neometris-Test/static/media/picto_cult.e755096d5438475206b23e4b4f72d4c5.svg",
+    "static/media/picto_immo.svg": "/Neometris-Test/static/media/picto_immo.2bb75dc10a8a65e22957a42c130d4cd5.svg",
+    "index.html": "/Neometris-Test/index.html",
+    "main.534e81e2.css.map": "/Neometris-Test/static/css/main.534e81e2.css.map",
+    "main.1813e561.js.map": "/Neometris-Test/static/js/main.1813e561.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.534e81e2.css",
+    "static/js/main.1813e561.js"
+  ]
+}
