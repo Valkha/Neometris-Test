@@ -2,7 +2,7 @@ import Main from './components/Main';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Template from './components/Template';
-import Services from './components/ServicesCSS';
+import Services from './components/Services';
 import Contact from './components/Contact';
 import Activites from './components/Activites';
 import { Routes, Route } from 'react-router-dom';
@@ -18,7 +18,7 @@ function App() {
             <Routes>
                 <Route path='/Neometris-Test' element={<Main />} />
                 <Route path="/" element={<Main />} />
-                <Route path="/home" element={<Main />} />
+                <Route path="/accueil" element={<Main />} />
                 <Route path="/template" element={<Template />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/activités" element={<Activites />} />
