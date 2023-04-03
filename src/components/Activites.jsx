@@ -18,7 +18,7 @@ const Services = () => {
             {/* ACTIVITES */}
             <div className=' w-full h-full lg:h-screen'>
                 <div id="activités_titre" className=' w-full flex pt-12 justify-center'>
-                    <h3 className='w-11/12 lg:w-7/12 text-2xl lg:text-4xl 2xl:text-5xl text-black font-bold uppercase text-center py-3'>Découvrez les avantages propres à votre secteur d'activité</h3>
+                    <h3 className='w-11/12 xl:w-7/12 text-xl lg:text-3xl 2xl:text-5xl text-black font-bold uppercase text-center py-3'>Découvrez les avantages propres à votre secteur d'activité</h3>
                 </div>
                 <div className='w-full h-full flex flex-col items-center '>
 

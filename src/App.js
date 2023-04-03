@@ -16,6 +16,7 @@ function App() {
         <div className=' bg-white overflow-hidden' >
             <Navbar />
             <Routes>
+                <Route path='/Neometris-Test' element={<Main />} />
                 <Route path="/" element={<Main />} />
                 <Route path="/home" element={<Main />} />
                 <Route path="/template" element={<Template />} />
