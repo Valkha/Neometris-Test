@@ -70,12 +70,12 @@ const Contact = () => {
 
 
     return (
-        <div id="contact" name='contact' className='w-full h-full lg:h-screen lg:pt-12 flex justify-center items-center bg-[url("assets/images/fonds/bg_mp.png")] bg-no-repeat bg-cover bg-center'>
+        <div id="contact" name='contact' className='w-full h-full 2xl:h-screen lg:pt-12 flex justify-center items-center bg-[url("assets/images/fonds/bg_mp.png")] bg-no-repeat bg-fill bg-center'>
             <div className='w-full h-full flex flex-col justify-center items-center '>
-                <div className='p-6 mt-8 w-4/5 lg:w-1/3 h-fit text-center rounded-2xl flex flex-col lg:flex-row justify-between items-center'>
+                <div className='p-6 mt-8 w-4/5 lg:w-2/3 xl:w-1/3 h-fit text-center rounded-2xl flex flex-col lg:flex-row justify-center items-center'>
                     <img src={Sophie} className='w-24 m-4 lg:w-40 rounded-full border-4' alt="photo de la fondatrice de Néometris, Sophie Bailleul" />
                     <div className='w-full h-fit text-gray-50 text-lg lg:text-xl'>
-                        <div className='flex w-full justify-start items-center pl-4'>
+                        <div className='flex w-full justify-center  lg:justify-start items-center pl-4'>
                             <p className='uppercase text-lg'><span className='text-2xl lg:text-3xl'>Sophie Bailleul</span><br></br> Fondatrice de Neometris</p>
                         </div>
                         <div className='flex justify-center lg:justify-start items-center'>
@@ -89,10 +89,10 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div id="form" className='mb-12 flex flex-col w-4/5 lg:w-1/3 rounded-br-3xl rounded-bl-md rounded-tl-3xl bg-white rounded-tr-md h-fit justify-center'>
+                <div id="form" className='mb-12 flex flex-col w-4/5 lg:w-2/3 xl:w-1/3 rounded-br-3xl rounded-bl-md rounded-tl-3xl bg-white rounded-tr-md h-fit justify-center'>
                     <form ref={form} onSubmit={sendEmail} className='flex flex-col justify-center items-center px-2 lg:w-full mt-12 '>
                         <div className='flex'>
-                            <h3 className='text-zinc-900 font-bold text-2xl lg:text-4xl tracking-widest mx-auto mb-4 uppercase'>Contactez-nous</h3>
+                            <h3 className='text-zinc-900 font-bold text-2xl 2xl:text-4xl tracking-widest mx-auto mb-4 uppercase'>Contactez-nous</h3>
                         </div>
                         <input className='w-2/3 my-2 p-2 h-6 text-gray-900 bg-gray-100 border rounded-xl' type="text" placeholder='Nom' name='name' />
                         <input className='w-3/4 my-2 p-2 h-6 text-gray-900 bg-gray-100 border rounded-xl' type="email" placeholder='Email' name='email' />

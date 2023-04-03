@@ -151,7 +151,7 @@ const Services = () => {
                     <h1 className='text-3xl lg:text-6xl uppercase font-bold text-pink-600'>Découvrez les services offerts par NEOMETRIS</h1>
                 </div>
                 {/* VISITE VIRTUELLE IMMERSIVE */}
-                <div id='vvi' name='VVI' className='w-11/12 lg:w-9/12 h-[150px] xl:h-[350px] 2xl:h-[400px] flex flex-col mt-24 '>
+                <div id='vvi' name='VVI' className='w-11/12 lg:w-9/12 h-[175px] xl:h-[350px] 2xl:h-[400px] flex flex-col mt-24 '>
                     <div className='w-full h-5/6 flex justify-between bg-zinc-900 rounded-r-full shadow-xl shadow-gray-500 relative'>
                         <div className='w-1/4 lg:w-1/3 h-[150px] lg:h-[450px] bg-[url("assets/images/camera.png")] bg-center bg-contain bg-no-repeat 2xl:ml-32 md:ml-24 sm:ml-12 absolute bottom-0'></div>
                         <div className="w-2/3 lg:w-2/3 h-full lg:mt-0 text-center flex flex-col justify-evenly items-center absolute right-6 lg:right-0 ">
@@ -168,8 +168,8 @@ const Services = () => {
 
                 {/* VUE AERIENNE */}
                 <div className='flex justify-end'>
-                    <div id='drone' name='drone' className='w-11/12 lg:w-9/12 h-[170px] xl:h-[350px] 2xl:h-[400px] flex flex-col mt-24 '>
-                        <div className='w-full h-5/6 flex justify-between bg-zinc-900 rounded-l-full shadow-xl shadow-gray-500 relative mr-32'>
+                    <div id='drone' name='drone' className='w-11/12 lg:w-9/12 h-[175px] xl:h-[350px] 2xl:h-[400px] flex flex-col mt-24 '>
+                        <div className='w-full h-5/6 flex justify-between bg-zinc-900 rounded-l-full shadow-xl shadow-gray-500 relative'>
                             <div className='order-2 w-1/3 h-[150px] lg:h-[450px] bg-[url("assets/images/drone.png")] bg-center bg-contain bg-no-repeat 2xl:ml-32 md:ml-24 sm:ml-12 absolute bottom-0 right-2 lg:right-0 '></div>
                             <div className="order-1 w-2/3 h-full text-center flex flex-col justify-evenly items-center absolute left-6 lg:left-0 ">
                                 <h3 className='w-full max-w-[700px] md:max-w-[300px] lg:max-w-[500px] 2xl:max-w-[700px] text-pink-600 text-xs lg:text-4xl uppercase mx-auto lg:my-2'>prise de vue aérienne</h3>

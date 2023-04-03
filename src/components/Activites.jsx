@@ -24,58 +24,58 @@ const Services = () => {
 
                     <div className='my-12 w-2/3 grid md:grid-cols-3 gap-1 text-center justify-center items-center bg-gray-200 rounded-3xl'>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoCom} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>COMMERCE</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>COMMERCE</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoCult} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>E-COMMERCE</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>E-COMMERCE</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoTour} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>TOURISME</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>TOURISME</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>EVENEMENTIEL</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>EVENEMENTIEL</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoImmo} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>IMMOBILIER</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>IMMOBILIER</h4>
                         </div>
 
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoBtp} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>ARCHITECTURE & BTP</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>ARCHITECTURE & BTP</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoEnt} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>ENTREPRISES</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>ENTREPRISES</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoRestau} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>RESTAURATION</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>RESTAURATION</h4>
                         </div>
                         <div className='flex flex-col justify-center items-center mx-auto my-6 hover:scale-105 duration-150 group cursor-pointer'>
-                            <div className='w-24 h-24 md:h-20 md:w-20 lg:w-28 lg:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
+                            <div className='w-20 h-20 md:h-20 md:w-20 2xl:w-28 2xl:h-28 bg-gradient-to-b from-pink-500 to-pink-800 rounded-3xl flex justify-center items-center drop-shadow-xl group-hover:shadow-gray-500 group-hover:shadow-xl duration-150'>
                                 <img src={pictoCult} alt="" className='w-2/3'></img>
                             </div>
-                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md lg:text-2xl'>CULTURE</h4>
+                            <h4 className='max-w-[250px] text-black font-bold mx-auto mt-6 text-md 2xl:text-2xl'>CULTURE</h4>
                         </div>
 
                     </div>
