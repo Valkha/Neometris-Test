@@ -19,16 +19,16 @@ const Navbar = () => {
             <nav className='w-full h-16 md:h-14 2xl:h-20 bg-zinc-900 z-50 flex items-center justify-between lg:block lg:justify-center'>
                 <div className='flex justify-between h-full items-center'>
                     <div>
-                        <LinkScroll to="home" spy={true} smooth={true} duration={500} >
-                            <LinkRouter to="home" spy={true} smooth={true}><img className='cursor-pointer w-24 lg:w-56 m-4 lg:pr-2' src={Logo} alt="Logo Neometris" /></LinkRouter>
+                        <LinkScroll to="accueil" spy={true} smooth={true} duration={500} >
+                            <LinkRouter to="accueil" spy={true} smooth={true}><img className='cursor-pointer w-24 lg:w-56 m-4 lg:pr-2' src={Logo} alt="Logo Neometris" /></LinkRouter>
                         </LinkScroll>
                     </div>
 
                     {/* Menu */}
                     <ul className='hidden md:flex w-full justify-center items-center lg:mx-12 xl:mr-24'>
                         <li className='uppercase text-sm lg:text-md xl:text-lg  lg:mx-4 rounded-2xl hover:font-bold hover:text-zinc-900 hover:bg-pink-500 hover:scale-105 duration-150'>
-                            <LinkScroll to="home" spy={true} smooth={true} duration={500}  >
-                                <LinkRouter to="home" spy={true} smooth={true} offset={0}>accueil</LinkRouter>
+                            <LinkScroll to="accueil" spy={true} smooth={true} duration={500}  >
+                                <LinkRouter to="accueil" spy={true} smooth={true} offset={0}>accueil</LinkRouter>
                             </LinkScroll>
                         </li>
                         <li className='uppercase text-sm lg:text-md xl:text-lg  lg:mx-4 rounded-2xl hover:font-bold hover:text-zinc-900 hover:bg-pink-500 hover:scale-105 duration-150'>
@@ -140,8 +140,8 @@ const Navbar = () => {
                 {/* Menu mobile */}
                 <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center'}>
                     <li className='py-12 text-3xl uppercase'>
-                        <LinkScroll onClick={handleClick} to="home" spy={true} smooth={true} duration={500}  >
-                            <LinkRouter onClick={handleClick} to="home" spy={true} smooth={true} offset={0}>accueil</LinkRouter>
+                        <LinkScroll onClick={handleClick} to="accueil" spy={true} smooth={true} duration={500}  >
+                            <LinkRouter onClick={handleClick} to="accueil" spy={true} smooth={true} offset={0}>accueil</LinkRouter>
                         </LinkScroll>
                     </li>
                     <li className='py-12 text-3xl text-center'>

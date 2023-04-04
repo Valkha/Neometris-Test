@@ -49,7 +49,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div id="home" name='home' className='w-full h-screen flex justify-evenly items-center bg-[url("assets/images/fonds/home_bg.png")] bg-no-repeat bg-center bg-cover px-12 lg:px-32 md:pt-12 lg:pt-20'>
+        <section id="accueil" name='accueil' className='w-full h-screen flex justify-evenly items-center bg-[url("assets/images/fonds/home_bg.png")] bg-no-repeat bg-center bg-cover px-12 lg:px-32 md:pt-12 lg:pt-20'>
             <div className=' lg:w-1/2 h-full flex flex-col justify-center items-start lg:pl-12'>
                 <div className='w-full flex flex-col justify-center items-center lg:items-start lg:mb-24 '>
                     <h1 id="neo-title" className='text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl  text-gray-100' >
@@ -73,7 +73,7 @@ const Home = () => {
             <div id="cube" className='hidden w-2/3 h-fit md:flex flex-col justify-center items-start z-10 py-auto'>
                 <img src={bgCubes} className='w-full h-full m-6' />
             </div>
-        </div >
+        </section >
     );
 }
 

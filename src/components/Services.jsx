@@ -145,8 +145,8 @@ const Services = () => {
 
 
     return (
-        <section id="services" name="services" className='w-screen h-full flex flex-col justify-center items-center'>
-            <div className='w-full h-full flex flex-col mt-20 pb-24 bg-bottom bg-no-repeat '>
+        <main id="services" name="services" className='w-screen h-full flex flex-col justify-center items-center'>
+            <section className='w-full h-full flex flex-col mt-20 pb-24 bg-bottom bg-no-repeat '>
                 <div id="title" className='flex w-full h-20 lg:py-20 mb-12 lg:my-12 justify-center items-center'>
                     <h1 className='xl:text-5xl 2xl:text-6xl uppercase font-bold text-pink-600'>Découvrez les services offerts par NEOMETRIS</h1>
                 </div>
@@ -197,8 +197,8 @@ const Services = () => {
                     </div>
                 </div>
                 <Modal_gallery open={openModal3} onClose={() => setOpenModal3(false)} />
-            </div>
-        </section>
+            </section>
+        </main>
 
     )
 }
