@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
-import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Target from '../assets/images/pictos/target.png'
@@ -51,25 +50,66 @@ const About = () => {
         )
     }
 
+    const SlideInDown = (elem, delay, duration) => {
+        gsap.fromTo(
+            elem,
+            {
+                opacity: 0,
+                y: -100,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                delay: delay || 0,
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top center",
+                    end: " top center",
+                }
+            }
+        )
+    }
+
+
+    useEffect(() => {
+        SlideInLeft('#mp_description');
+    }, [])
+
     useEffect(() => {
         SlideInLeft('#presentation, #presentation2');
     }, [])
 
     useEffect(() => {
-        SlideInRight('#pres-pic');
+        SlideInRight('#pres-pic, #showroom');
+    }, [])
+
+    useEffect(() => {
+        SlideInDown('#title');
+    }, [])
+
+    useEffect(() => {
+        SlideInDown('#title2');
+    }, [])
+
+    useEffect(() => {
+        SlideInDown('#title3');
+    }, [])
+
+    useEffect(() => {
+        SlideInDown('#title4');
     }, [])
 
     return (
         <div name='about' className='w-full h-full flex flex-col justify-center items-center'>
             {/* Format VVI */}
             <section className='w-full h-full lg:h-screen pt-16 mt-0 flex flex-col justify-between items-center bg-gray-100 '>
-                <div id="presentation" className='w-5/6 h-full flex flex-col lg:text-5xl'>
+                <div id="presentation" className='w-5/6 2xl:w-3/4 h-full flex flex-col 2xl:justify-evenly lg:text-5xl'>
                     <h4 className=' w-full text-gray-800 text-2xl lg:text-3xl xl:text-4xl uppercase font-bold tracking-wider py-6 flex justify-center items-center text-center'>
                         Solution de communication innovante : optez pour une visite virtuelle !
                     </h4>
                     <div className='w-full flex justify-center items-center'>
                         <div className='w-full  h-full flex justify-center items-center'>
-                            <p className='w-full lg:text-lg xl:text-2xl p-4 text-center text-pink-500'>Découvrez votre établissement depuis votre site web, réseaux sociaux, fiche Google ou encore grâce à un QR code personnalisé sur vos supports de communication grâce à la Visite Virtuelle Immersive.</p>
+                            <p className='w-full lg:text-lg xl:text-2xl 2xl:text-3xl p-4 text-center text-pink-500'>Découvrez votre établissement depuis votre site web, réseaux sociaux, fiche Google ou encore grâce à un QR code personnalisé sur vos supports de communication grâce à la Visite Virtuelle Immersive.</p>
 
                         </div>
                     </div>
@@ -111,18 +151,22 @@ const About = () => {
             </section>
             {/* La technologie Matterport */}
             <section className='w-full h-full lg:h-screen flex flex-col items-center justify-center bg-[url("assets/images/fonds/bg_mp.png")] bg-no-repeat bg-fill bg-center'>
-                <h3 className='text-2xl lg:text-4xl xl:-text-4xl 2xl:text-5xl text-gray-100 uppercase pt-20 md:pt-10 lg:pt-0 lg:pb-8'>la technologie Matterport&trade;</h3>
+                <h3 id="title" className='text-2xl lg:text-4xl xl:-text-4xl 2xl:text-5xl text-gray-100 uppercase pt-20 md:pt-10 lg:pt-0 lg:pb-8'>la technologie Matterport&trade;</h3>
                 <div className='w-full h-full lg:h-2/3 flex flex-col lg:flex-row justify-center items-center'>
-                    <div className="w-full lg:w-1/2 h-2/3 p-8 lg:px-12 flex justify-center items-center">
+                    <div id="mp_description" className="w-full lg:w-1/2 h-2/3 p-8 lg:px-12 flex justify-center items-center">
                         <div className='w-full h-fit flex flex-col text-gray-100'>
-                            <h5 className='text-xl lg:text-2xl xl;text-4xl py-8 uppercase mx-auto'><span className='text-rose-500 text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>Matterport&trade;</span> est la référence et leader mondial de la visite virtuelle immersive</h5>
-                            <p className='lg:text-lg xl:text-xl p-auto'>Découvrez le leader mondial de la visite virtuelle grâce à Matterport™. Leur technologie haut de gamme, qui combine rayons infrarouges et photographie à 360°, permet de créer des jumeaux numériques précis, mesurables et immersifs d'espaces physiques. Initialement conçu pour l'immobilier, cet outil est de plus en plus utilisé dans les domaines de l'architecture, du bâtiment, du commerce, du tourisme et de la culture.</p>
-                            <p className='lg:text-lg xl:text-xl p-auto py-2'></p>
+                            <h5 className='text-xl lg:text-2xl xl:text-4xl py-8 uppercase mx-auto'><span className='text-rose-500 text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>Matterport&trade;</span> est la référence et leader mondial de la visite virtuelle immersive</h5>
+                            <p className='lg:text-lg xl:text-xl 2xl:text-2xl p-auto'>Découvrez le leader mondial de la visite virtuelle grâce à Matterport™. Leur technologie haut de gamme, qui combine rayons infrarouges et photographie à 360°, permet de créer des jumeaux numériques précis, mesurables et immersifs d'espaces physiques.</p>
+                            <p className='lg:text-lg xl:text-xl 2xl:text-2xl p-auto py-2'> Initialement conçu pour l'immobilier, cet outil est de plus en plus utilisé dans les domaines de l'architecture, du bâtiment, du commerce, du tourisme et de la culture.</p>
                         </div>
                     </div>
-                    <div className=" w-full lg:w-1/2 h-96 xl:h-full flex justify-center lg:justify-start items-center">
+                    <div id="showroom" className=" w-full lg:w-1/2 h-96 xl:h-full flex justify-center lg:justify-start items-center">
                         <div className="bg-gray-800 rounded-2xl hover:border-2 w-11/12 h-5/6 flex justify-center items-center text-gray-50 lg:text-7xl hover:scale-105 duration-150">
-                            <iframe className='w-full h-full rounded-2xl' src='https://my.matterport.com/show/?m=iuFTUE3GSUk' frameborder='0' allowfullscreen="true" allow='xr-spatial-tracking'>
+                            <iframe className='w-full h-full rounded-2xl' src="https://my.matterport.com/show/?m=iuFTUE3GSUk"
+                                allowFullScreen
+                                title="Matterport Model C'est Fabriqué Ici"
+                                aria-label="Matterport 3D model viewer"
+                                frameBorder="0">
 
                             </iframe>
                         </div>
@@ -131,9 +175,9 @@ const About = () => {
             </section>
             {/* Les chiffres clés */}
             <section className='w-full h-full lg:h-screen flex flex-col items-center justify-center px-6 pb-12 md:pb-0 lg:px-32 bg-gray-100'>
-                <h4 className='w-full h-20 flex items-center justify-center font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl lg:my-20 uppercase'>La visite virtuelle immersive, c'est:</h4>
-                <div className="w-full h-full flex flex-col md:flex-row items-center md:items-start">
-                    <div className=" mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                <h4 id="title2" className='w-full h-20 flex items-center justify-center font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl lg:my-20 uppercase'>La visite virtuelle immersive, c'est:</h4>
+                <div id="choose" className="w-full h-full flex flex-col md:flex-row items-center md:items-start">
+                    <div id="1" className=" mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-fit md:h-1/2 flex flex-col justify-center items-center'>
                             <img src={Speaker} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='w-4/5 text-rose-500 font-bold text-lg xl:text-xl 2xl:text-3xl flex justify-center items-center'>
@@ -145,7 +189,7 @@ const About = () => {
                             <p className='mt-6 text-black'>Proposez une visite virtuelle sur votre site web et augmentez le temps de visite de vos visiteurs <span className='text-rose-500 font-bold'>jusqu'à 6 fois ! </span>Cette méthode améliore également votre référencement sur Google, ce qui peut augmenter votre visibilité en ligne. </p>
                         </div>
                     </div>
-                    <div className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                    <div id="1" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-1/2 flex flex-col justify-center items-center'>
                             <img src={Target} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='w-4/5 text-rose-500 font-bold text-lg xl:text-xl 2xl:text-3xl flex justify-center items-center'>
@@ -157,7 +201,7 @@ const About = () => {
                             <p className='mt-6 text-black'>Répondez à la demande croissante des internautes qui souhaitent obtenir un maximum d'informations avant de se déplacer en proposant une visite virtuelle immersive sur votre site web. La majorité des internautes préfère les établissements qui proposent une visite virtuelle pour leur permettre de découvrir votre entreprise avant de se rendre sur place.<span className='text-rose-500 font-bold'></span> </p>
                         </div>
                     </div>
-                    <div className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                    <div id="1" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-1/2 flex flex-col justify-center items-center'>
                             <img src={Stonks} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='flex flex-col items-center justify-center text-justify w-4/5 mx-auto mt-4'>
@@ -177,7 +221,7 @@ const About = () => {
             {/* PROCESSUS DE REALISATION */}
             <section className='w-full'>
                 <div id="processus" name='process' className='w-full h-screen  flex flex-col bg-gray-100'>
-                    <h4 className='w-full h-20 flex items-center justify-center font-bold text-3xl text-center xl:text-4xl 2xl:text-5xl uppercase'>Comment traitons-nous un projet?</h4>
+                    <h4 id="title3" className='w-full h-20 flex items-center justify-center font-bold text-3xl text-center xl:text-4xl 2xl:text-5xl uppercase'>Comment traitons-nous un projet?</h4>
                     <div className='w-full h-full flex flex-col md:flex-row md:justify-center items-center'>
                         <div id="proc-left" className='h-5/6 w-full md:w-1/3 md:mt-12 flex flex-col '>
                             <div className='w-full h-1/4 flex flex-col justify-center xl:justify-start '>
@@ -220,19 +264,17 @@ const About = () => {
             {/* CHOISIR NEOMETRIS */}
             <section className='h-full lg:h-screen w-full flex flex-col items-center justify-center pb-12 lg:pb-0 px-4 md:px-32 bg-[url("assets/images/fonds/home_bg.png")] bg-no-repeat bg-cover bg-center text-gray-100'>
                 <div className='w-full h-full pt-20 flex flex-col items-center justify-center'>
-                    <div>
-                        <h2 className='uppercase text-center w-full text-3xl xl:text-4xl 2xl:text-6xl'>Choisir <span className='text-rose-500'>NEOMETRIS</span>, c'est ...</h2>
-                    </div>
-                    <div className=' h-full w-full md:w-2/3 flex flex-col items-center justify-evenly'>
-                        <div className='flex flex-col items-center justify-center my-4'>
+                    <h2 className='uppercase text-center w-full text-3xl xl:text-4xl 2xl:text-6xl'>Choisir <span className='text-rose-500'>NEOMETRIS</span>, c'est ...</h2>
+                    <div id="choose" className=' h-full w-full md:w-2/3 flex flex-col items-center justify-evenly'>
+                        <div id="1" className='flex flex-col items-center justify-center my-4'>
                             <h3 className='uppercase w-full text-xl xl:text-2xl 2xl:text-4xl p-4 text-center text-rose-500'>un interlocuteur unique de A à Z</h3>
                             <p className='text-center text-md 2xl:text-2xl'>Notre objectif est de vous offrir un service de qualité, basé sur une relation de proximité, la confiance et la confidentialité.</p>
                         </div>
-                        <div className='flex flex-col items-center justify-center my-4'>
+                        <div id="1" className='flex flex-col items-center justify-center my-4'>
                             <h3 className='uppercase w-full text-xl xl:text-2xl 2xl:text-4xl p-4 text-center text-rose-500'>une proposition sur mesure & adaptée</h3>
                             <p className='text-center text-md 2xl:text-2xl'>Création de solutions sur mesure pour atteindre vos objectifs avec écoute, conseil et créativité</p>
                         </div>
-                        <div className='flex flex-col items-center justify-center my-4'>
+                        <div id="1" className='flex flex-col items-center justify-center my-4'>
                             <h3 className='uppercase w-full text-xl xl:text-2xl 2xl:text-4xl p-4 text-center text-rose-500'>Pluricompétence & Partenariats</h3>
                             <p className='text-center text-md 2xl:text-2xl'>En fonction de vos besoins, nous pourrons travailler en collaboration avec les entreprises de votre choix. Si vous le souhaitez, nous pouvons également vous présenter nos partenaires spécialisés en communication, graphisme, gestion de réseaux sociaux, création et gestion de sites web</p>
                         </div>

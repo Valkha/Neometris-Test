@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from './Footer'
 import { useParams } from "react-router-dom"
 
 function Template() {

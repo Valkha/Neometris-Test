@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import data from '../data/images.json'
-import Gallery_popup from './Gallery_popup'
+import GalleryPopUp from './GalleryPopUp'
 
 function Gallery() {
 
@@ -58,7 +58,7 @@ function Gallery() {
                 </div>
             ))}
             {clickedImg && (
-                <Gallery_popup clickedImg={clickedImg} handleRotationRight={handleRotationRight} handleRotationLeft={handleRotationLeft} setClickedImg={setClickedImg} />
+                <GalleryPopUp clickedImg={clickedImg} handleRotationRight={handleRotationRight} handleRotationLeft={handleRotationLeft} setClickedImg={setClickedImg} />
             )}
         </div>
     );

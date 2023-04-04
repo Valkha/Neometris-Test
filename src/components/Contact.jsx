@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import emailjs from '@emailjs/browser'
 import Sophie from '../assets/images/sophie_bailleul.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMobileScreenButton, faEnvelope, faPerson } from '@fortawesome/free-solid-svg-icons'
+import { faMobileScreenButton, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
     const form = useRef();
@@ -25,34 +23,33 @@ const Contact = () => {
 
     }
 
-    const SlideInRight = (elem, delay, duration) => {
+    const SlideInDown = (elem, delay, duration) => {
         gsap.fromTo(
             elem,
             {
                 opacity: 0,
-                x: 500,
-                scale: 0.5,
+                y: -100,
             },
             {
                 opacity: 1,
-                x: 0,
-                scale: 1,
+                y: 0,
                 delay: delay || 0,
                 scrollTrigger: {
                     trigger: elem,
                     start: "top center",
-                    end: "bottom center",
+                    end: " bottom center",
                 }
             }
         )
     }
+
 
     const ZoomInCenter = (elem, delay, duration) => {
         gsap.fromTo(
             elem,
             {
                 opacity: 0,
-                scale: 0.1,
+                scale: 0.4,
             },
             {
                 opacity: 1,
@@ -67,11 +64,14 @@ const Contact = () => {
         )
     }
 
+    useEffect(() => {
+        SlideInDown('#sophie, #form');
+    }, [])
 
 
     return (
         <div id="contact" name='contact' className='w-full h-full 2xl:h-screen lg:pt-12 flex justify-center items-center bg-[url("assets/images/fonds/bg_mp.png")] bg-no-repeat bg-fill bg-center'>
-            <div className='w-full h-full flex flex-col justify-center items-center '>
+            <div id="sophie" className='w-full h-full flex flex-col justify-center items-center '>
                 <div className='p-6 mt-8 w-4/5 lg:w-2/3 xl:w-1/3 h-fit text-center rounded-2xl flex flex-col lg:flex-row justify-center items-center'>
                     <img src={Sophie} className='w-24 m-4 lg:w-40 rounded-full border-4' alt="photo de la fondatrice de Néometris, Sophie Bailleul" />
                     <div className='w-full h-fit text-gray-50 text-lg lg:text-xl'>

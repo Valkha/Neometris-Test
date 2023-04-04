@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 const Home = () => {
 
-    {/* Animations */ }
+    /* Animations */
     const SlideInRight = (elem, delay, duration) => {
         gsap.fromTo(
             elem,
@@ -39,14 +39,39 @@ const Home = () => {
         )
     }
 
+    const SlideInLeftSlow = (elem, delay, duration) => {
+        const tl = gsap.timeline({ delay: 0.4 });
+
+        elem.forEach((el, i) => {
+            tl.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    x: -400,
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: duration,
+                },
+                i * delay
+            );
+        });
+    };
+
+    useEffect(() => {
+        SlideInLeftSlow(document.querySelectorAll('#vpd h2'), 0.3, 1);
+    }, []);
+
 
 
     useEffect(() => {
         SlideInRight('#cube');
     }, [])
     useEffect(() => {
-        SlideInLeft('#neo-title, #vpd');
+        SlideInLeft('#neo-title');
     }, [])
+
 
     return (
         <section id="accueil" name='accueil' className='w-full h-screen flex justify-evenly items-center bg-[url("assets/images/fonds/home_bg.png")] bg-no-repeat bg-center bg-cover px-12 lg:px-32 md:pt-12 lg:pt-20'>
@@ -71,7 +96,7 @@ const Home = () => {
                 </div>
             </div >
             <div id="cube" className='hidden w-2/3 h-fit md:flex flex-col justify-center items-start z-10 py-auto'>
-                <img src={bgCubes} className='w-full h-full m-6' />
+                <img src={bgCubes} alt="boutique en 3D" className='w-full h-full m-6' />
             </div>
         </section >
     );
