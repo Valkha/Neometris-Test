@@ -60,6 +60,7 @@ const About = () => {
             {
                 opacity: 1,
                 y: 0,
+                stagger: 0.5,
                 delay: delay || 0,
                 scrollTrigger: {
                     trigger: elem,
@@ -69,6 +70,36 @@ const About = () => {
             }
         )
     }
+
+    const SlideInDownSlow = (elem, delay, duration) => {
+        const tl = gsap.timeline({ delay: 0.4 });
+
+        elem.forEach((el, i) => {
+            tl.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    y: -100,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top center",
+                        end: " top end",
+                    },
+
+                },
+
+                i * delay
+            );
+        });
+    };
+
+    useEffect(() => {
+        SlideInDownSlow(document.querySelectorAll('#stat'), 0.4, 1);
+    }, []);
 
 
     useEffect(() => {
@@ -99,17 +130,18 @@ const About = () => {
         SlideInDown('#title4');
     }, [])
 
+
     return (
         <div name='about' className='w-full h-full flex flex-col justify-center items-center'>
             {/* Format VVI */}
             <section className='w-full h-full lg:h-screen pt-16 mt-0 flex flex-col justify-between items-center bg-gray-100 '>
                 <div id="presentation" className='w-5/6 2xl:w-3/4 h-full flex flex-col 2xl:justify-evenly lg:text-5xl'>
-                    <h4 className=' w-full text-gray-800 text-2xl lg:text-3xl xl:text-4xl uppercase font-bold tracking-wider py-6 flex justify-center items-center text-center'>
+                    <h4 className=' w-full text-gray-800 text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl uppercase font-bold tracking-wider py-6 flex justify-center items-center text-center'>
                         Solution de communication innovante : optez pour une visite virtuelle !
                     </h4>
                     <div className='w-full flex justify-center items-center'>
                         <div className='w-full  h-full flex justify-center items-center'>
-                            <p className='w-full lg:text-lg xl:text-2xl 2xl:text-3xl p-4 text-center text-pink-500'>Découvrez votre établissement depuis votre site web, réseaux sociaux, fiche Google ou encore grâce à un QR code personnalisé sur vos supports de communication grâce à la Visite Virtuelle Immersive.</p>
+                            <p className='w-full lg:text-lg xl:text-xl 2xl:text-3xl p-4 text-center text-pink-500'>Découvrez votre établissement depuis votre site web, réseaux sociaux, fiche Google ou encore grâce à un QR code personnalisé sur vos supports de communication grâce à la Visite Virtuelle Immersive.</p>
 
                         </div>
                     </div>
@@ -144,7 +176,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <p className='w-full my-4 lg:text-lg xl:text-2xl text-center'>Découvrez les avantages spécifiques à votre activité dans notre rubrique dédiée. Que vous soyez dans le commerce, l'architecture, la rénovation ou l'immobilier, nous avons ce qu'il vous faut pour améliorer votre présence en ligne.
+                    <p className='w-full my-4 lg:text-lg xl:text-lg 2xl:text-2xl text-center'>Découvrez les avantages spécifiques à votre activité dans notre rubrique dédiée. Que vous soyez dans le commerce, l'architecture, la rénovation ou l'immobilier, nous avons ce qu'il vous faut pour améliorer votre présence en ligne.
                         {/*<Link className='bg-pink-500 border-2 border-black p-2 px-3 rounded-3xl mx-1 cursor-pointer hover:scale-105 hover:text-pink-500 hover:font-bold hover:bg-gray-100 duration-150' to="activites" spy={true} smooth={true} duration={500}>Votre activité</Link>*/}
                     </p>
                 </div>
@@ -177,31 +209,31 @@ const About = () => {
             <section className='w-full h-full lg:h-screen flex flex-col items-center justify-center px-6 pb-12 md:pb-0 lg:px-32 bg-gray-100'>
                 <h4 id="title2" className='w-full h-20 flex items-center justify-center font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl lg:my-20 uppercase'>La visite virtuelle immersive, c'est:</h4>
                 <div id="choose" className="w-full h-full flex flex-col md:flex-row items-center md:items-start">
-                    <div id="1" className=" mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                    <div id="stat" className=" mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-fit md:h-1/2 flex flex-col justify-center items-center'>
                             <img src={Speaker} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='w-4/5 text-rose-500 font-bold text-lg xl:text-xl 2xl:text-3xl flex justify-center items-center'>
                                 <span className=' flex justify-center items-center text-3xl xl:text-5xl'>+30%</span>
-                                <p className='pl-4 text-md md:text-sm xl:text-2xl 2xl:text-3xl'> de référencement naturel !</p>
+                                <p className='pl-4 text-md md:text-sm xl:text-xl 2xl:text-3xl'> de référencement naturel !</p>
                             </div>
                         </div>
-                        <div className='flex text-center items-center justify-center w-full mx-auto text-sm xl:text-xl mt-4'>
+                        <div className='flex text-center items-center justify-center w-full mx-auto text-sm xl:text-base 2xl:text-xl mt-4'>
                             <p className='mt-6 text-black'>Proposez une visite virtuelle sur votre site web et augmentez le temps de visite de vos visiteurs <span className='text-rose-500 font-bold'>jusqu'à 6 fois ! </span>Cette méthode améliore également votre référencement sur Google, ce qui peut augmenter votre visibilité en ligne. </p>
                         </div>
                     </div>
-                    <div id="1" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                    <div id="stat" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-1/2 flex flex-col justify-center items-center'>
                             <img src={Target} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='w-4/5 text-rose-500 font-bold text-lg xl:text-xl 2xl:text-3xl flex justify-center items-center'>
                                 <span className='flex justify-center items-center text-3xl lg:text-5xl'>x2</span>
-                                <p className='pl-4 text-md md:text-sm xl:text-2xl 2xl:text-3xl text-center'> + de probabilités d’une visite sur place</p>
+                                <p className='pl-4 text-md md:text-sm xl:text-xl 2xl:text-3xl text-center'> + de probabilités d’une visite sur place</p>
                             </div>
                         </div>
-                        <div className='flex text-center items-center justify-center mx-auto text-sm xl:text-xl mt-4'>
+                        <div className='flex text-center items-center justify-center mx-auto text-sm xl:text-sm 2xl:text-xl mt-4'>
                             <p className='mt-6 text-black'>Répondez à la demande croissante des internautes qui souhaitent obtenir un maximum d'informations avant de se déplacer en proposant une visite virtuelle immersive sur votre site web. La majorité des internautes préfère les établissements qui proposent une visite virtuelle pour leur permettre de découvrir votre entreprise avant de se rendre sur place.<span className='text-rose-500 font-bold'></span> </p>
                         </div>
                     </div>
-                    <div id="1" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
+                    <div id="stat" className="mx-6 w-full md:w-1/3 h-2/3 flex flex-col justify-center items-center text-gray-50">
                         <div className='w-full h-1/2 flex flex-col justify-center items-center'>
                             <img src={Stonks} alt="" className='my-4 w-24 md:w-20 lg:w-24 2xl:w-40' />
                             <div className='flex flex-col items-center justify-center text-justify w-4/5 mx-auto mt-4'>
@@ -209,9 +241,9 @@ const About = () => {
                                     <span className='flex justify-center items-center text-lg 2xl:text-4xl uppercase'>Augmenter :</span>
                                 </div>
                             </div>
-                            <ul className='mt-6 text-sm xl:text-xl text-center text-black'>
-                                <p>Améliorez votre performance commerciale grâce à une stratégie marketing efficace : augmentation de votre chiffre d'affaires, de votre visibilité en ligne, de vos ventes et de la satisfaction client, ainsi que de l'engagement sur les réseaux sociaux.</p>
-                            </ul>
+                            <div className='flex text-center items-center justify-center mx-auto text-sm xl:text-base 2xl:text-xl mt-4'>
+                                <p className='mt-6 text-black'>Améliorez votre performance commerciale grâce à une stratégie marketing efficace : augmentation de votre chiffre d'affaires, de votre visibilité en ligne, de vos ventes et de la satisfaction client, ainsi que de l'engagement sur les réseaux sociaux.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
